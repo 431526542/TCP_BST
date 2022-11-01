@@ -64,5 +64,26 @@ int main()
 		std::cout << vac[i] << std::endl;
 	}
 
+
+	////////////////////////////////////////////
+	MyList<int> mylist;
+	mylist.push_back(100);
+	mylist.push_back(300);
+	mylist.push_back(400);
+
+	MyList<int>::iterator listiter = mylist.begin();
+	++listiter;
+	listiter = mylist.insert(listiter, 200);
+
+	std::cout << "===================" << std::endl;
+	std::cout << "List iterator test!" << std::endl;
+	std::cout << "==================" << std::endl;
+	for (listiter = mylist.begin(); listiter != mylist.end(); ++listiter)
+	{
+		std::cout << *listiter << std::endl;
+	}
+	
+
+
 	return 0;
 }
